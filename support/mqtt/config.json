@@ -1,17 +1,14 @@
 {
-  "mqtt_host": "<mqtt-service-host>",
-  "mqtt_port": 443,
-  "mqtt_username": "<USERNAME>",
-  "mqtt_password": "<PASSWORD>",
+  "mqtt_host": "mqtt.nocomesh.org",
+  "mqtt_port": 1883,
+  "mqtt_username": "meshdev",
+  "mqtt_password": "large4cats",
   "mqtt_topics": [
-    "meshcore/OLM/+/packets",
-    "meshcore/PDX/+/packets",
-    "meshcore/SEA/+/packets",
-    "meshcore/YVR/+/packets"
+    "meshcore/DEN/+/packets"
   ],
 
-  "service_host": "https://<service-host>.pages.dev",
-  "center_position": [47.6205, -122.3494],
+  "service_host": "https://meshcore-map.nocomesh.org",
+  "center_position": [40.40418319501895, -105.07054315357969],
   "valid_dist": 150,
 
   "channel_hash": "e0",
@@ -20,57 +17,12 @@
   "_observers_note": "Use mesh_observers XOR watched_observers. mesh_observers takes precedence.",
   "mesh_observers": [
     {
-      "mesh_name": "OLM",
+      "mesh_name": "DEN",
       "observers": [
-        "OlyMesh_SE"
-      ]
-    },
-    {
-      "mesh_name": "PDX",
-      "observers": [
-        "Endymion-G2",
-        "HudsonsBay",
-        "Woodward Repeater"
-      ]
-    },
-    {
-      "mesh_name": "PWT",
-      "observers": [
-        "Discovery MQTT",
-        "Red Repeater"
-      ]
-    },
-    {
-      "mesh_name": "SEA",
-      "observers": [
-        "N7JMV-NEW-RP",
-        "N7JMV/WA7LAW-EVERETT-RP",
-        "Powerline Trail",
-        "PugetMesh Haystack",
-        "W7ITL-PTDefiance-IKOKA",
-        "WW7STR/PugetMesh Cougar"
-      ]
-    },
-    {
-      "mesh_name": "YVR",
-      "observers": [
-        "Yaletown Repeater",
-        "YVR//Seafair"
+        "ZWatt01"
       ]
     }
   ],
 
-  "watched_observers": [
-    "Discovery MQTT",
-    "N7JMV-NEW-RP",
-    "N7JMV/WA7LAW-EVERETT-RP",
-    "Powerline Trail",
-    "PugetMesh Haystack",
-    "Red Repeater",
-    "W7ITL-PTDefiance-IKOKA",
-    "WW7STR/PugetMesh Cougar",
-    "Woodward Repeater",
-    "Yaletown Repeater",
-    "YVR//Seafair"
-  ]
+  "watched_observers": []
 }
