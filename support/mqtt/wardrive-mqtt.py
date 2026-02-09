@@ -395,19 +395,12 @@ def main():
   init_observers_map()
 
   # Initialize the MQTT client.
-  client = mqtt.Client(
-    mqtt.CallbackAPIVersion.VERSION2,
-    transport='websockets',
-    client_id=None,
-    clean_session=True,
-    protocol=mqtt.MQTTv311)
+  client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 
   client.username_pw_set(
     CONFIG['mqtt_username'],
     CONFIG['mqtt_password'])
 
-  client.tls_set(cert_reqs=ssl.CERT_REQUIRED)
-  client.tls_insecure_set(False)
   client.reconnect_delay_set(min_delay=1, max_delay=60)
 
   client.on_connect = on_connect
